@@ -52,12 +52,15 @@ rasa train
 修改上述文件后需重新执行 `rasa train`。
 
 ## 运行
+
 直接对话
+
 ```bash
 rasa shell
 ```
 
 启动服务后即可与机器人对话（具体命令可参考 [Rasa 文档](https://rasa.com/docs/)）：
+
 ```bash
 rasa run
 ```
