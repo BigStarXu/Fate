@@ -3,89 +3,89 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - 嗨
+    - 你好
+    - 哈喽
+    - 早上好
+    - 晚上好
+    - 在吗
+    - 嗨你好
+    - 你好呀
+    - 下午好
+    - 早
+    - 晚上好呀
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - 拜拜
+    - 再见
+    - 回头见
+    - 晚安
+    -  bye
+    - 再会
+    - 祝你开心
+    - 下次聊
+    - 拜
+    - 待会儿见
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - 是的
+    - 对
+    - 好
+    - 当然
+    - 可以
+    - 没错
+    - 嗯
+    - 好的
+    - 行
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - 不
+    - 没有
+    - 不是
+    - 不想
+    - 不用了
+    - 算了
+    - 不太行
+    - 不行
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - 很好
+    - 不错
+    - 挺开心的
+    - 心情很好
+    - 我很好
+    - 特别棒
+    - 超级好
+    - 非常不错
+    - 好极了
+    - 完美
+    - 开心
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - 今天糟透了
+    - 我很难过
+    - 心情不好
+    - 有点失望
+    - 很郁闷
+    - 我好难过
+    - 难过
+    - 很不开心
+    - 不好
+    - 不太好吧
+    - 特别难过
+    - 太惨了
+    - 很伤心
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - 你是机器人吗
+    - 你是真人吗
+    - 我在和机器人说话吗
+    - 你是人类吗
+    - 你是 bot 吗
+    - 你是客服还是机器人
