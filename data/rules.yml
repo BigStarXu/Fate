@@ -16,3 +16,9 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: 用户想算塔罗时激活塔罗表单
+  steps:
+  - intent: ask_tarot
+  - action: tarot_form
+  - active_loop: tarot_form

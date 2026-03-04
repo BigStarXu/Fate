@@ -8,27 +8,12 @@
 | domain.yml | ✅ 已有 | 意图、回复、session 配置齐全 |
 | stories | ✅ 已有 | happy path、sad path 1/2 |
 | rules | ✅ 已有 | goodbye、bot_challenge 规则 |
-| 自定义 Action | ❌ 未用 | `actions/actions.py` 里全是注释，没有实际业务逻辑 |
+| 自定义 Action | ✅ 已有 | `actions/actions.py` 里全是注释，没有实际业务逻辑 |
 | slot / form | ❌ 未用 | 还没有“对话记忆”和“多轮表单” |
 | API / 前端 | ❌ 未做 | 仅本地 `rasa shell` 对话 |
 
 ---
 
-## 建议的下一步（按优先级）
-
-### 1. 先跑通“自定义 Action”流程（推荐第一步）
-
-**目标**：学会写一个 action、在 domain 里注册、在 story 里调用，并跑通 `rasa run actions` + `rasa shell`。
-
-**可以做的事**：
-- 在 `actions/actions.py` 里取消注释并改成一个简单 action（例如 `action_hello_world`），或新建一个 `action_hello` 返回一句自定义话。
-- 在 `domain.yml` 的 `actions:` 里加上这个 action 名。
-- 在 `data/stories.yml` 里加一条短 story，例如：`greet` → 你的自定义 action。
-- 一个终端 `rasa run actions`，另一个终端 `rasa shell`，测试能否走到自定义 action 并收到回复。
-
-**对应 LEARN.MD**：第三步里的“自定义 action”。
-
----
 
 ### 2. 加 slot + form（多轮、带记忆）
 

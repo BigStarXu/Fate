@@ -28,3 +28,12 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: 塔罗占卜多轮填表（表单填完后提交）
+  steps:
+  - intent: ask_tarot
+  - action: tarot_form
+  - active_loop: tarot_form
+  - action: tarot_form
+  - active_loop: null
+  - action: action_submit_tarot

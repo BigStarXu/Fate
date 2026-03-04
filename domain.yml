@@ -8,6 +8,23 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_tarot
+
+slots:
+  question:
+    type: text
+    mappings:
+      - type: from_text
+  spread_type:
+    type: text
+    mappings:
+      - type: from_text
+
+forms:
+  tarot_form:
+    required_slots:
+      - question
+      - spread_type
 
 responses:
   utter_greet:
@@ -29,9 +46,19 @@ responses:
   utter_iamabot:
   - text: "我是算命大师。"
 
+  utter_ask_question:
+  - text: "您想问哪方面的问题？例如感情、事业、财运，或随便说说心里在意的都行。"
+
+  utter_ask_spread_type:
+  - text: "想用哪种牌阵？单张快问、三张（过去现在未来）、还是凯尔特十字？"
+
+  utter_tarot_confirm:
+  - text: "好的，您问的是「{question}」，用「{spread_type}」来占。稍后给您解读～"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
 actions:
   - action_hello_world
+  - action_submit_tarot

@@ -25,3 +25,21 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text="Hello World!")
 
         return []
+
+
+class ActionSubmitTarot(Action):
+    """塔罗表单填完后：读出 slot 并回复确认（带记忆）。"""
+
+    def name(self) -> Text:
+        return "action_submit_tarot"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        question = tracker.get_slot("question") or "（未说）"
+        spread_type = tracker.get_slot("spread_type") or "（未选）"
+        dispatcher.utter_message(
+            text=f"好的，您问的是「{question}」，用「{spread_type}」来占。稍后给您解读～"
+        )
+        return []
